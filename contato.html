@@ -23,18 +23,18 @@
         <div>
             <form>
                 <label for="nome">Nome</label>
-                <input type="text" id="nome">
-                <br>
+                <input type="text" id="nome" onkeyup = "validaNome()">
+                <div id = "txtNome"></div>
                 <br>
                 <label for="nome">E-mail</label>
                 <input type="text" id="email">
-                <br>
+                <div id = "txtEmail"></div>
                 <br>
                 <label for="nome">Assunto</label>
                 <textarea name="assunto" id="assunto" cols="60" rows="5"></textarea>
+                <div id="txtAssunto"></div>
                 <br>
-                <br>
-                <button>Enviar</button>
+                <button onclick="enviar()">Enviar</button>
             </form>
         </div>
         <div class="ml-50">
@@ -45,7 +45,7 @@
 
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.3898139901908!2d-46.52326288502429!3d-23.446399484740088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef533e2a78395%3A0x34f300f10584758f!2sAv.Brigadeiro%20Faria%20Lima%2C%201002%20-%20Jardim%20Cocaia%2C%20Guarulhos%20-%20SP%2C%2007130-000!5e0!3m2!1spt-BR!2sbr!4v1637685684485!5m2!1spt-BR!2sbr"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" onmousemove="mapaZoom()" onmouseout="mapaNormal()" id="mapa" ></iframe>
         </div>
     </div>
 
@@ -65,6 +65,8 @@
         </p>
 
     </footer>
+
+    <script src="assets/js/script.js"></script>
 
 </body>
 
